@@ -1,5 +1,5 @@
 package WebService::Algolia;
-$WebService::Algolia::VERSION = '0.1000';
+$WebService::Algolia::VERSION = '0.1001';
 use 5.008001;
 use Moo;
 with 'WebService::Client';
@@ -216,7 +216,7 @@ WebService::Algolia - Algolia API Bindings
 
 =head1 VERSION
 
-version 0.1000
+version 0.1001
 
 =head1 SYNOPSIS
 
@@ -639,7 +639,7 @@ The following methods can be passed into the C<batch_index_objects> method as an
 
 B<Request:>
 
-    my $batch = alg->batch_index_objects('foo', [
+    alg->batch_index_objects('foo', [
         sub { alg->create_index_object('foo', { hello => 'world' })},
         sub { alg->create_index_object('foo', { goodbye => 'world' })},
     ]);
@@ -653,7 +653,7 @@ B<Response:>
 
 B<Request:>
 
-    my $batch = alg->batch_index_objects('foo', [
+    alg->batch_index_objects('foo', [
         sub { alg->update_index_object('foo', 5698830, { 1 => 2 })},
         sub { alg->update_index_object('foo', 5698840, { 3 => 4 })},
     ]);
@@ -667,7 +667,7 @@ B<Response:>
 
 B<Request:>
 
-    my $batch = alg->batch_index_objects('foo', [
+    alg->batch_index_objects('foo', [
         sub { alg->delete_index_object('foo', 5698830 )},
         sub { alg->delete_index_object('foo', 5698840 )},
     ]);
