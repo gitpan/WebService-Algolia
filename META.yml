@@ -32,4 +32,4 @@ requires:
 resources:
   bugtracker: https://github.com/aanari/WebService-Algolia/issues
   repository: git://github.com/aanari/WebService-Algolia.git
-version: '0.1001'
+version: '0.1002'
